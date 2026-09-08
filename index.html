@@ -1,161 +1,340 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We've Moved — Simplay Studio</title>
+  <meta name="description" content="Bluedot Game has renamed to Simplay Studio. You will be redirected shortly." />
+  <meta name="google-site-verification" content="-0fhG2LqvjnbPLDETNlnfw7FDzCkh-CeS__3quwfEA0" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<html>
-	<head>
-		<title>Blue DOT Game</title>
-		<meta name="description" content="Blue DOT Game. Develop iOS and Android games for FREE. Egg Dunk, Twin Fly, King Kong protect island, Hero Jump, Basketball Mini, Knife Game, Cowboy Shooting, Bamboo Dancing, Spaceman, One Inch Punch, Fireworks Play" />
-		
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/mainv3.css" />
-  		<link rel="icon" href="images/logo.png">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      overflow: hidden;
+    }
 
-		<meta name="google-site-verification" content="-0fhG2LqvjnbPLDETNlnfw7FDzCkh-CeS__3quwfEA0" />
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+    /* Background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(135deg, #e8f0fe 0%, #f0f4f8 50%, #e8f5e9 100%);
+    }
 
-				<!-- Header -->
-					<header id="header"></header>
+    /* Soft decorative blobs */
+    .bg::before, .bg::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.45;
+    }
+    .bg::before {
+      width: 500px; height: 500px;
+      top: -120px; left: -100px;
+      background: #c7d7fd;
+    }
+    .bg::after {
+      width: 400px; height: 400px;
+      bottom: -100px; right: -80px;
+      background: #bbf7d0;
+    }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Games</a></li>
-							<li><a href="privacy.html">Privacy</a></li>
-						</ul>
-					</nav>
+    .particles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							 <blockquote>We enjoy making games for everyone and ourselves.</blockquote>
-							 <section class="tiles">
-							 	<article>
-									<span class="image">
-										<img src="images/fireworks512.png" alt="Fireworks" />
-									</span>
-									<a href="fireworks.html">
-										<h2 class='articleTitle'>Fireworks Play</h2>
-									</a>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/knifegame.png" alt="Knife Game" />
-									</span>
-									<a href="knifegame.html">
-										<h2 class='articleTitle'>Knife Game</h2>
-									</a>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/basketball.png" alt="Basketball" />
-									</span>
-									<a href="basketball.html">
-										<h2 class='articleTitle'>Basketball</h2>
-									</a>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/spaceman512.png" alt="Spaceman" />
-									</span>
-									<a href="spaceman.html">
-										<h2 class='articleTitle'>Spaceman</h2>
-									</a>
-								</article>
-								<!-- <article>
-									<span class="image">
-										<img src="images/fireworkskid512.png" alt="Fireworks" />
-									</span>
-									<a href="fireworks-kids.html">
-										<h2 class='articleTitle'>Fireworks Baby</h2>
-									</a>
-								</article> -->
-							 	
-							 	<!-- <article>
-									<span class="image">
-										<img src="images/cowboygunshooting512.png" alt="Cowboy Gun Shooting" />
-									</span>
-									<a href="cowboygunshooting.html">
-										<h2 class='articleTitle'>Cowboy Gun Shooting</h2>
-									</a>
-								</article> -->
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: float linear infinite;
+    }
 
-								<!-- <article>
-									<span class="image">
-										<img src="images/oneinchpunch512.png" alt="Spaceman" />
-									</span>
-									<a href="oneinchpunch.html">
-										<h2 class='articleTitle'>One Inch Punch</h2>
-									</a>
-								</article>
-							 	<article>
-									<span class="image">
-										<img src="images/basketball.png" alt="Duck Hunter" />
-									</span>
-									<a href="basketball.html">
-										<h2 class='articleTitle'>Basketball</h2>
-									</a>
-								</article>
-								<!-- <article>
-									<span class="image">
-										<img src="images/bamboodancing.png" alt="Bamboo Dancing Icon" />
-									</span>
-									<a href="bamboodancing.html">
-										<h2 class='articleTitle'>Bamboo Dancing</h2>
-									</a>
-								</article> -->
-								<!-- <article>
-									<span class="image">
-										<img src="images/twinflyicon512.png" alt="Twin Fly Icon" />
-									</span>
-									<a href="twinfly.html">
-										<h2 class='articleTitle'>Twin Fly</h2>
-									</a>
-								</article> -->
-								<article>
-									<span class="image">
-										<img src="images/eggdunkicon512.png" alt="Egg Dunk Icon" />
-									</span>
-									<a href="eggdunk.html">
-										<h2 class='articleTitle'>Egg Dunk</h2>
-									</a>
-								</article>
-								<!-- <article>
-									<span class="image">
-										<img src="images/protectislandicon512.png" alt="Protect Island" />
-									</span>
-									<a href="protectisland.html">
-										<h2 class='articleTitle'>Protect Island</h2>
-									</a>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/duckhunter512.png" alt="Duck Hunter" />
-									</span>
-									<a href="duckhunter.html">
-										<h2 class='articleTitle'>Duck Hunter</h2>
-									</a>
-								</article> -->
-								
-							</section>
-						</div>
-					</div>
+    @keyframes float {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 0.5; }
+      90%  { opacity: 0.25; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
 
-				<!-- Footer -->
-					<footer id="footer"></footer>
+    /* Card */
+    .card {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 56px 48px;
+      max-width: 560px;
+      width: 90%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.08);
+    }
 
-			</div>
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #2563eb;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 32px;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/mainv2.js"></script>
+    .brand-transition {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
 
-	</body>
+    .brand-old {
+      font-size: 20px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-decoration: line-through;
+      text-decoration-color: #cbd5e1;
+    }
+
+    .arrow-icon {
+      font-size: 20px;
+      color: #2563eb;
+      animation: pulse-arrow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-arrow {
+      0%, 100% { transform: translateX(0); opacity: 0.6; }
+      50%       { transform: translateX(4px); opacity: 1; }
+    }
+
+    .brand-new {
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563eb, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .subtitle strong {
+      color: #1e1e1e;
+      font-weight: 600;
+    }
+
+    /* Countdown ring */
+    .countdown-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .ring-container {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .ring-svg {
+      transform: rotate(-90deg);
+      width: 80px;
+      height: 80px;
+    }
+
+    .ring-track {
+      fill: none;
+      stroke: #e2e8f0;
+      stroke-width: 4;
+    }
+
+    .ring-progress {
+      fill: none;
+      stroke: url(#ringGrad);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 207;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+    }
+
+    .ring-number {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 800;
+      color: #333333;
+    }
+
+    .countdown-label {
+      font-size: 12px;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #2592eb, #059669);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+      letter-spacing: 0.02em;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+    }
+
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+
+    .cta-arrow {
+      transition: transform 0.2s;
+    }
+
+    .cta-btn:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="particles" id="particles"></div>
+
+  <div class="card">
+    <h1>We've Got a New Home</h1>
+    <p class="subtitle">
+      Blue DOT Game has renamed to <strong><span style="color: red">Sim</span>play Studio</strong>.<br>
+    </p>
+
+    <div class="countdown-wrap">
+      <div class="ring-container">
+        <svg class="ring-svg" viewBox="0 0 80 80">
+          <defs>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#666666"/>
+              <stop offset="100%" stop-color="#333333"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="40" cy="40" r="33"/>
+          <circle class="ring-progress" id="ringProgress" cx="40" cy="40" r="33"/>
+        </svg>
+        <div class="ring-number" id="countdownNum">10</div>
+      </div>
+      <span class="countdown-label">Redirecting in seconds…</span>
+    </div>
+
+    <a class="cta-btn" href="https://simplaystudio.com" id="ctaBtn">
+      Visit Simplay Studio
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <p class="footer-note">You'll be redirected automatically. Click above to go now.</p>
+  </div>
+
+  <script>
+    // Particles
+    (function () {
+      const container = document.getElementById('particles');
+      const colors = ['#93e4fd', '#6ee7b7', '#bfdbfe', '#a7f3d0'];
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 4 + 2;
+        p.style.cssText = [
+          `width:${size}px`, `height:${size}px`,
+          `left:${Math.random() * 100}%`,
+          `background:${colors[Math.floor(Math.random() * colors.length)]}`,
+          `animation-duration:${6 + Math.random() * 10}s`,
+          `animation-delay:${Math.random() * 10}s`
+        ].join(';');
+        container.appendChild(p);
+      }
+    })();
+
+    // Countdown + redirect
+    (function () {
+      const TOTAL = 10;
+      const ring = document.getElementById('ringProgress');
+      const num  = document.getElementById('countdownNum');
+      const circumference = 2 * Math.PI * 33; // ≈ 207.3
+
+      ring.style.strokeDasharray  = circumference;
+      ring.style.strokeDashoffset = 0;
+
+      let remaining = TOTAL;
+
+      function tick() {
+        remaining--;
+        num.textContent = remaining;
+        const offset = circumference * (1 - remaining / TOTAL);
+        ring.style.strokeDashoffset = offset;
+
+        if (remaining <= 0) {
+          window.location.href = 'https://simplaystudio.com';
+        } else {
+          setTimeout(tick, 1000);
+        }
+      }
+
+      setTimeout(tick, 1000);
+    })();
+  </script>
+</body>
 </html>
